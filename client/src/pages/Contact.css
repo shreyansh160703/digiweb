@@ -1,0 +1,43 @@
+/* Contact Form Animations */
+.contact-form-container {
+  animation: fadeIn 1.2s ease-in-out;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-form-container:hover {
+  transform: scale(1.03);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+}
+
+input, textarea {
+  transition: all 0.3s ease;
+  border: 2px solid #ccc;
+  outline: none;
+}
+
+input:focus, textarea:focus {
+  border-color: #f97316;
+  box-shadow: 0 0 10px rgba(249, 115, 22, 0.6);
+  transform: scale(1.02);
+}
+
+button {
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+button:hover {
+  background-color: #f97316;
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(249, 115, 22, 0.5);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

@@ -1,0 +1,195 @@
+/* Reset default margins and prevent horizontal scrolling */
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  overflow-x: hidden;
+  padding-top: 150px; /* Adjust based on navbar height */
+  font-family: Arial, sans-serif; /* Optional: Add a default font */
+  background-color: #f9f9f9; /* Optional: Add a background color */
+}
+
+/* Navbar Container */
+.navbar {
+  position: fixed;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #ffffff;
+  padding: 20px 20px; /* Increased padding for larger navbar */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  position: fixed; /* Keeps navbar fixed at the top */
+  top: 0;
+  left: 0;
+  width: 100vw; /* Ensures full viewport width */
+  z-index: 1000;
+  height: 100px; /* Increased Navbar height */
+  transition: background-color 0.3s ease; /* Optional: Smooth transition */
+}
+
+/* Navbar List */
+.navbar ul {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0 auto; /* Centering fix */
+  justify-content: center;
+  width: 100%; /* Ensures full width */
+  max-width: 1200px; /* Optional: Limit width for better design */
+}
+
+/* Navbar Item */
+.nav-item {
+  margin: 0 20px;
+  position: relative;
+  font-size: 1em;
+  font-weight: 500;
+}
+
+.nav-item a {
+  color: #333;
+  text-decoration: none;
+  padding-bottom: 5px;
+  transition: color 0.3s ease, border-bottom 0.3s ease;
+}
+
+.nav-item a:hover {
+  color: #000; /* Black color on hover */
+  border-bottom: 2px solid #000; /* Black underline on hover */
+}
+
+/* Active Navbar Item */
+.nav-item.active a {
+  color: #000; /* Black color for active item */
+}
+
+.nav-item::before {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background-color: #000; /* Black color for active underline */
+  transform: scaleX(0);
+  transform-origin: bottom right;
+  transition: transform 0.3s ease;
+}
+
+.nav-item.active::before {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+/* Search Form */
+.search-form {
+  display: flex;
+  align-items: center;
+  margin-left: 30px;
+}
+
+.search-input {
+  padding: 8px 10px;
+  font-size: 14px;
+  border: 1.5px solid #ccc;
+  border-radius: 6px;
+  transition: border-color 0.3s ease;
+}
+
+.search-input:focus {
+  border-color: #000; /* Black border on focus */
+  outline: none;
+}
+
+.search-button {
+  padding: 8px 14px;
+  background-color: #000; /* Black button */
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-left: 10px;
+  font-weight: 500;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.search-button:hover {
+  background-color: #333; /* Darker black hover effect */
+  transform: scale(1.05); /* Subtle scaling effect on hover */
+}
+
+/* Page Content Container */
+.container {
+  padding-top: 100px; /* Push content down to avoid navbar overlap */
+  max-width: 100%;
+  margin: 0;
+}
+
+/* Navbar Alignment for Small Screens */
+@media (max-width: 768px) {
+  .navbar {
+    padding: 10px;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .navbar ul {
+    flex-direction: column;
+    margin-top: 10px;
+    align-items: flex-start;
+    width: 100%;
+  }
+
+  .nav-item {
+    margin: 8px 0;
+  }
+
+  .search-form {
+    margin-top: 10px;
+    width: 100%;
+  }
+
+  .search-input {
+    width: calc(100% - 110px);
+  }
+
+  .search-button {
+    width: 90px;
+  }
+}
+
+/* Add a smooth scrolling effect */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Ensure content starts below the fixed navbar */
+.content {
+  margin-top: 100px; /* Matches the height of your fixed navbar */
+  padding: 20px; /* Optional: Add some padding for better layout */
+  min-height: calc(100vh - 100px); /* Ensures the content fills the rest of the viewport */
+  box-sizing: border-box; /* Includes padding in the height calculation */
+}
+
+.navbar-logo {
+  width: 80px; /* Adjust size */
+  height: auto;
+  border-radius: 50%; /* Optional for round logo */
+  margin-right: 10px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.navbar-logo:hover {
+  transform: scale(1.1); /* Hover effect */
+}
+.navbar-brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.navbar {
+  background: rgba(255, 255, 255, 0.8); /* Transparent glass effect */
+  backdrop-filter: blur(10px);
+  border-bottom: 2px solid rgba(0, 0, 0, 0.1);
+}

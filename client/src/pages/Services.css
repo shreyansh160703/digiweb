@@ -1,0 +1,220 @@
+/* Services.css */
+
+.services-container {
+  background: white;
+  color: black;
+  min-height: 100vh;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 3rem 2rem;
+  text-align: center;
+  width: 100vw;
+  margin: 0;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.services-title {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 2rem;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 3rem;
+  width: 100%;
+  max-width: 100%;
+  padding: 0 2rem;
+  box-sizing: border-box;
+}
+
+.service-card {
+  border-radius: 1.5rem;
+  overflow: hidden;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.service-card:hover {
+  transform: scale(1.1);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+}
+
+.service-image {
+  height: 300px;
+  object-fit: cover;
+  width: 100%;
+}
+
+.service-content {
+  padding: 2rem;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.service-title {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  font-weight: bold;
+}
+
+.service-description {
+  font-size: 1.2rem;
+  color: #333;
+  text-align: justify;
+}
+
+.book-service-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+  width: 100%;
+}
+
+.book-service-button {
+  background-color: #fff;
+  color: #000;
+  font-size: 20px;
+  font-weight: bold;
+  padding: 12px 24px;
+  border: 2px solid #000;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  position: relative;
+  overflow: hidden;
+}
+
+.book-service-button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease-in-out;
+}
+
+.book-service-button:hover::before {
+  transform: scaleX(1);
+}
+
+.book-service-button:hover {
+  color: #fff;
+  border-color: #fff;
+}
+
+/* Utility Classes */
+.bg-white {
+  background-color: #ffffff;
+}
+
+.text-black {
+  color: #000000;
+}
+
+.min-h-screen {
+  min-height: 100vh;
+}
+
+.py-12 {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+.px-6 {
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-4xl {
+  font-size: 2.25rem;
+  font-weight: bold;
+  margin-bottom: 3rem;
+}
+
+.grid {
+  display: grid;
+  gap: 3rem;
+}
+
+.grid-cols-1 {
+  grid-template-columns: 1fr;
+}
+
+.md\:grid-cols-2 {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.lg\:grid-cols-3 {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.shadow-lg {
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.rounded-2xl {
+  border-radius: 1rem;
+}
+
+.h-64 {
+  height: 16rem;
+}
+
+.object-cover {
+  object-fit: cover;
+  width: 100%;
+}
+
+.p-6 {
+  padding: 1.5rem;
+}
+
+.text-2xl {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.text-lg {
+  font-size: 1.125rem;
+}
+
+.bg-gray-100 {
+  background-color: #f3f4f6;
+}
+
+.flex-grow {
+  flex-grow: 1;
+}
+
+.overflow-hidden {
+  overflow: hidden;
+}
+
+.transition {
+  transition: all 0.3s ease-in-out;
+}
+
+.motion-div:hover {
+  transform: scale(1.1);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+}

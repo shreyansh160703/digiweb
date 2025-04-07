@@ -1,0 +1,138 @@
+.products-container {
+  text-align: center;
+  padding: 300px 100px 80px; /* Reduced excessive top padding */
+  background: #ffffff;
+  color: #000000;
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+.products-container h1 {
+  font-size: 3rem;
+  color: #000000;
+  margin-bottom: 50px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  animation: slideDown 1s ease-in-out;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 60px; /* Increased gap for better spacing */
+  padding: 0 50px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.product-card {
+  background: #ffffff;
+  padding: 35px;
+  border-radius: 15px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  animation: fadeInUp 1s ease-in-out;
+}
+
+.product-card:hover {
+  transform: scale(1.07);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.25);
+}
+
+.product-card h2 {
+  font-size: 2.2rem;
+  margin-bottom: 18px;
+  color: #000000;
+}
+
+.product-card p {
+  font-size: 1.1rem;
+  color: #4b5563;
+  margin-bottom: 20px;
+}
+
+.product-card button {
+  padding: 12px 24px;
+  background: #000000;
+  color: #ffffff;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease-in-out;
+  font-size: 1rem;
+}
+
+.product-card button:hover {
+  background: #333333;
+  transform: scale(1.05);
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+  .products-container {
+      padding: 200px 50px 60px;
+  }
+  .product-grid {
+      gap: 40px;
+      padding: 0 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  .products-container {
+      padding: 150px 30px 50px;
+  }
+  .product-grid {
+      gap: 30px;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  }
+  .product-card {
+      padding: 25px;
+  }
+}
+
+@media (max-width: 480px) {
+  .products-container h1 {
+      font-size: 2.5rem;
+  }
+  .product-card h2 {
+      font-size: 1.8rem;
+  }
+  .product-card p {
+      font-size: 1rem;
+  }
+  .product-card button {
+      font-size: 0.9rem;
+  }
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+      opacity: 0;
+  }
+  to {
+      opacity: 1;
+  }
+}
+
+@keyframes slideDown {
+  from {
+      transform: translateY(-50px);
+      opacity: 0;
+  }
+  to {
+      transform: translateY(0);
+      opacity: 1;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+      transform: translateY(30px);
+      opacity: 0;
+  }
+  to {
+      transform: translateY(0);
+      opacity: 1;
+  }
+}
